@@ -6,10 +6,10 @@ const Header = () => {
       <div></div>
       <ul className="flex items-start space-x-5">
         <li>
-          <NavTo to="#">Home</NavTo>
+          <NavTo to="/">Home</NavTo>
         </li>
         <li>
-          <NavTo to="#">Products</NavTo>
+          <NavTo to="/products">Products</NavTo>
         </li>
         <li>
           <NavTo to="#">Cost Management</NavTo>
