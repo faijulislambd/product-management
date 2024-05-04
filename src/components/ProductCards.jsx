@@ -7,9 +7,12 @@ const ProductCards = ({
   inStock = 0,
   sold = 0,
   returned = 0,
+  shadow = "shadow-neuGr",
 }) => {
   return (
-    <div className="rounded-xl shadow-neuGr p-5 group transition-all overflow-hidden relative">
+    <div
+      className={`rounded-xl ${shadow} p-5 group transition-all overflow-hidden relative`}
+    >
       <div className="group-hover:flex group-hover:justify-between h-[380px]">
         <img
           src={productImg}

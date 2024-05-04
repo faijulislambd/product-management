@@ -6,10 +6,11 @@ const NumCard = ({
   number = 0,
   className = "",
   symbol = "",
+  shadow = "shadow-neuGr",
 }) => {
   return (
     <div
-      className={`rounded-md flex flex-col justify-center items-center space-y-3 shadow-neuOr p-8 ${className}`}
+      className={`rounded-md flex flex-col justify-center items-center space-y-3 ${shadow} p-8 ${className}`}
     >
       <h4 className="font-bebas text-3xl text-center">{title}</h4>
       <span className="font-bebas text-5xl">
