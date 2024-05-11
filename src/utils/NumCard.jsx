@@ -6,15 +6,14 @@ const NumCard = ({
   number = 0,
   className = "",
   symbol = "",
-  shadow = "shadow-neuGr",
 }) => {
   return (
     <div
-      className={`rounded-md flex flex-col justify-center items-center space-y-3 ${shadow} p-8 ${className}`}
+      className={`rounded-md flex flex-col justify-center items-center space-y-3 shadow-xl p-8 ${className} bg-orange-500/75`}
     >
-      <h4 className="font-bebas text-3xl text-center">{title}</h4>
-      <span className="font-bebas text-5xl">
-        <CountUp end={number} className="font-bebas" />
+      <h4 className="font-freeman text-2xl text-center">{title}</h4>
+      <span className="font-freeman text-5xl">
+        <CountUp end={number} className="font-freeman" />
         {symbol}
       </span>
     </div>

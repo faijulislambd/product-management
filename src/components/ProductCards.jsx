@@ -7,11 +7,10 @@ const ProductCards = ({
   inStock = 0,
   sold = 0,
   returned = 0,
-  shadow = "shadow-neuGr",
 }) => {
   return (
     <div
-      className={`rounded-xl ${shadow} p-5 group transition-all overflow-hidden relative`}
+      className={`rounded-xl shadow-xl border border-slate-200 p-5 group transition-all overflow-hidden relative`}
     >
       <div className="group-hover:flex group-hover:justify-between h-[380px]">
         <img
@@ -29,34 +28,34 @@ const ProductCards = ({
         </div>
       </div>
 
-      <table className="table-fixed w-[90%] rounded-xl absolute shadow-neuGr transition-all opacity-0 scale-0 top-[140px] group-hover:scale-100 group-hover:opacity-100 left-1/2 -translate-x-1/2 text-xl duration-500">
+      <table className="table-fixed bg-slate-200/55 w-[90%] rounded-xl absolute shadow-xl transition-all opacity-0 scale-0 top-[140px] group-hover:scale-100 group-hover:opacity-100 left-1/2 -translate-x-1/2 text-xl duration-500">
         <tbody>
           <tr>
-            <td className="font-bebas border-r-2 border-white px-2 py-3">
+            <td className="font-freeman border-r-2 border-white px-2 py-3">
               Chinese Model No
             </td>
             <td className="px-2 py-3">{productChineseCode}</td>
           </tr>
           <tr className="border-t-2 border-white">
-            <td className="font-bebas border-r-2 border-white px-2 py-3">
+            <td className="font-freeman border-r-2 border-white px-2 py-3">
               Lot No
             </td>
             <td className="px-2 py-3">{lot}</td>
           </tr>
           <tr className="border-t-2 border-white">
-            <td className="font-bebas border-r-2 border-white px-2 py-3">
+            <td className="font-freeman border-r-2 border-white px-2 py-3">
               In Stock
             </td>
             <td className="px-2 py-3">{inStock}</td>
           </tr>
           <tr className="border-t-2 border-white">
-            <td className="font-bebas border-r-2 border-white px-2 py-3">
+            <td className="font-freeman border-r-2 border-white px-2 py-3">
               Sold
             </td>
             <td className="px-2 py-3">{sold}</td>
           </tr>
           <tr className="border-t-2 border-white">
-            <td className="font-bebas border-r-2 border-white px-2 py-3">
+            <td className="font-freeman border-r-2 border-white px-2 py-3">
               Return
             </td>
             <td className="px-2 py-3">{returned}</td>

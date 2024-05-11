@@ -5,8 +5,8 @@ import product3 from "./../../../assets/product-img/3.jpg";
 
 const TopSellingProducts = () => {
   return (
-    <div className="py-36 bg-slate-200 px-12">
-      <h2 className="font-bebas text-5xl mb-10 text-center">
+    <div className="py-36 bg-white px-12">
+      <h2 className="font-freeman text-5xl mb-10 text-center">
         Our Best Selling Products
       </h2>
       <div className="max-w-screen-xl mx-auto grid grid-cols-3 gap-10">
