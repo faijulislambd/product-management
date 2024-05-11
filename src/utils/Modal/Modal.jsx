@@ -4,12 +4,10 @@ import { IoMdClose } from "react-icons/io";
 const Modal = ({ children, close, title = "Modal Title" }) => {
   const dropIn = {
     hidden: {
-      y: "-100vh",
-      opacity: 0,
+      scale: 0,
     },
     visible: {
-      y: 0,
-      opacity: 1,
+      scale: 1,
       transition: {
         type: "spring",
         duration: 0.1,
@@ -18,8 +16,7 @@ const Modal = ({ children, close, title = "Modal Title" }) => {
       },
     },
     exit: {
-      y: "300px",
-      opacity: 0,
+      scale: 0,
     },
   };
 
