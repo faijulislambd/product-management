@@ -6,22 +6,34 @@ import { TbEdit, TbEye, TbTrash } from "react-icons/tb";
 import EditForm from "./EditForm/EditForm";
 import Modal from "../../utils/Modal/Modal";
 import { AnimatePresence } from "framer-motion";
+import Button from "../../utils/Button";
+import AddForm from "./AddForm/AddForm";
 const Products = () => {
   const [editOpen, setEditOpen] = useState(false);
+  const [addOpen, setAddOpen] = useState(false);
+  const [productOpen, setProductOpen] = useState(false);
 
   const openEdit = () => setEditOpen(true);
   const closeEdit = () => setEditOpen(false);
+  const openAdd = () => setAddOpen(true);
+  const closeAdd = () => setAddOpen(false);
+  const openProduct = () => setProductOpen(true);
+  const closeProduct = () => setProductOpen(false);
 
   return (
     <div>
       <div className="bg-orange-400 pb-12 pt-6">
         <div className="max-w-screen-xl mx-auto px-12">
-          <div className="grid grid-cols-4">
+          <div className="grid grid-cols-4 items-center">
             <div>
               <Input label="Search By Model Number" />
             </div>
+            <div></div>
+            <div></div>
+            <div className="pt-7 text-right">
+              <Button onClick={openAdd}>Add Product</Button>
+            </div>
           </div>
-          <div></div>
         </div>
       </div>
       <div className="py-12 bg-white">
@@ -86,7 +98,7 @@ const Products = () => {
                         <TbEdit />
                       </Badge>
                     </a>
-                    <button type="button">
+                    <button type="button" onClick={openProduct}>
                       <Badge bg="bg-sky-300">
                         <TbEye />
                       </Badge>
@@ -105,10 +117,20 @@ const Products = () => {
       </div>
       <AnimatePresence initial={false}>
         {editOpen && (
+          <Modal editOpen={editOpen} title="Edit Product" close={closeEdit}>
+            <EditForm></EditForm>
+          </Modal>
+        )}
+        {addOpen && (
+          <Modal addOpen={addOpen} title="Add Product" close={closeAdd}>
+            <AddForm></AddForm>
+          </Modal>
+        )}
+        {productOpen && (
           <Modal
-            editOpen={editOpen}
-            title="Edit Product"
-            close={closeEdit}
+            productOpen={productOpen}
+            title="Product"
+            close={closeProduct}
           ></Modal>
         )}
       </AnimatePresence>
