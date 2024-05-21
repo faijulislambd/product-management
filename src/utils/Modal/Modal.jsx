@@ -1,7 +1,12 @@
 import { motion } from "framer-motion";
 import Backdrop from "./Backdrop";
 import { IoMdClose } from "react-icons/io";
-const Modal = ({ children, close, title = "Modal Title" }) => {
+const Modal = ({
+  children,
+  backDropClick = false,
+  close,
+  title = "Modal Title",
+}) => {
   const dropIn = {
     hidden: {
       scale: 0,
@@ -20,8 +25,16 @@ const Modal = ({ children, close, title = "Modal Title" }) => {
     },
   };
 
+  if (backDropClick) {
+    backDropClick = close;
+  } else {
+    backDropClick = (e) => {
+      e.preventDefault();
+    };
+  }
+
   return (
-    <Backdrop onClick={close}>
+    <Backdrop onClick={backDropClick}>
       <motion.div
         onClick={(e) => {
           e.stopPropagation();
